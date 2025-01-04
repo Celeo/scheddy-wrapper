@@ -29,3 +29,8 @@ dockerize:
 
 # do everything
 all: download install build dockerize
+
+# push the built Docker image to my server
+deploy:
+  docker save celeo/scheddy | ssh -C do-scheddy docker load
+  scp docker-compose.yml do-scheddy:/srv/docker-compose.new.yml
