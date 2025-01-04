@@ -1,0 +1,15 @@
+[Unit]
+Description=Scheddy
+After=docker.service
+Requires=docker.service
+
+[Service]
+WorkingDirectory=/srv/scheddy
+TimeoutStartSec=10
+Restart=always
+ExecStartPre=-/usr/bin/docker compose stop
+ExecStartPre=-/usr/bin/docker compose down
+ExecStart=/usr/bin/docker compose up
+
+[Install]
+WantedBy=multi-user.target
