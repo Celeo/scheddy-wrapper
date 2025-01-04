@@ -2,7 +2,7 @@ RELEASE := "1.0.3"
 
 # something so that `just` doesn't do a bunch of stuff
 passthrough:
-  echo "Requires a step, like `just all`"
+  @echo "ERROR: Requires a step, like 'all'"
 
 # download the tar.gz of the specified release and unpack it
 download:
