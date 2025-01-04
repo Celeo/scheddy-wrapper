@@ -1,0 +1,3 @@
+training.zdvartcc.org {
+	reverse_proxy :3000
+}
