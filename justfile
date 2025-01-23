@@ -1,4 +1,4 @@
-RELEASE := "1.0.3"
+RELEASE := "1.1.2"
 
 # something so that `just` doesn't do a bunch of stuff
 passthrough:
@@ -33,4 +33,4 @@ all: download install build dockerize
 # push the built Docker image to my server
 deploy:
   docker save celeo/scheddy | ssh -C do-zdv docker load
-  scp docker-compose.yml do-scheddy:/srv/docker-compose.new.yml
+  scp docker-compose.yml do-zdv:/srv/docker-compose.new.yml
