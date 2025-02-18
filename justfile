@@ -1,5 +1,5 @@
-REPO := "https://github.com/celeo/scheddy"
-RELEASE := "1.1.3-celeo"
+REPO := "https://github.com/ZTL-ARTCC/scheddy"
+RELEASE := "1.1.8"
 
 # something so that `just` doesn't do a bunch of stuff
 passthrough:
