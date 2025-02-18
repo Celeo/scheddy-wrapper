@@ -13,6 +13,13 @@ download:
   rm v{{RELEASE}}.tar.gz
   mv scheddy-{{RELEASE}} upstream
 
+download-source branch:
+  @echo "Downloading source from {{REPO}} @ {{branch}}"
+  wget {{REPO}}/archive/{{branch}}.zip
+  unzip {{branch}}.zip
+  rm {{branch}}.zip
+  mv scheddy-{{branch}} upstream
+
 # set up JS dependencies
 [working-directory: './upstream']
 install:
