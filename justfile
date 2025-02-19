@@ -1,5 +1,5 @@
-REPO := "https://github.com/ZTL-ARTCC/scheddy"
-RELEASE := "1.1.8"
+REPO := env('REPO', 'https://github.com/ZTL-ARTCC/scheddy')
+RELEASE := env('RELEASE', '1.1.8')
 
 # something so that `just` doesn't do a bunch of stuff
 passthrough:
