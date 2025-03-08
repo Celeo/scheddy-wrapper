@@ -24,13 +24,14 @@ download-source branch:
 # set up JS dependencies
 [working-directory: './upstream']
 install:
-  bun install
+  bun i --frozen-lockfile
+  bun svelte-kit sync
 
 # copy in the .env file and build everything
 [working-directory: './upstream']
 build:
   cp ../.env .
-  bun run build
+  bun --bun run build
 
 # take the built files and put them into a Docker ontainer
 dockerize:
