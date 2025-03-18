@@ -9,4 +9,4 @@ EXPOSE 3000
 RUN npm i -g bun
 COPY upstream .
 
-CMD ["node", "build/index.js"]
+CMD ["bun", "--bun", "run", "./build"]
