@@ -1,5 +1,5 @@
 REPO := env('REPO', 'https://github.com/ZTL-ARTCC/scheddy')
-RELEASE := env('RELEASE', '1.2.1-1')
+RELEASE := env('RELEASE', '1.3.0')
 
 # something so that `just` doesn't do a bunch of stuff
 passthrough:
@@ -30,7 +30,6 @@ install:
 # copy in the .env file and build everything
 [working-directory: './upstream']
 build:
-  cp ../.env .
   bun --bun run build
 
 # take the built files and put them into a Docker ontainer
