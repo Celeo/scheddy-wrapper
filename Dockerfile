@@ -8,5 +8,6 @@ EXPOSE 3000
 
 RUN npm i -g bun
 COPY upstream .
+COPY .env .
 
 CMD ["bun", "--bun", "run", "./build"]
