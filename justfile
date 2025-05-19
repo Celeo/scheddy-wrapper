@@ -15,7 +15,7 @@ download:
 
 download-source branch:
   rm -rf upstream
-  @echo "Downloading source from {{REPO}} @ {{branch}}"
+  @echo ">> Downloading source from {{REPO}} @ {{branch}}"
   wget {{REPO}}/archive/{{branch}}.zip
   unzip {{branch}}.zip
   rm {{branch}}.zip
